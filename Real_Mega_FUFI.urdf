@@ -74,8 +74,8 @@
     <joint name="pole_rotation" type="continuous">
         <axis xyz="1 0 0"/>  <!-- Rotazione attorno all'asse X -->
         <origin xyz="0.0 0.0 0"/>
-        <parent link="pole"/>
-        <child link="another_link"/> <!-- Un link aggiuntivo se necessario -->
+        <parent link="cart"/>
+        <child link="pole"/> <!-- Un link aggiuntivo se necessario -->
     </joint>
 
 <!-- Chiudoil nodo robot, così lui capisce che il robot è finito -->
