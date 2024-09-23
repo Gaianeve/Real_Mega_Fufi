@@ -1,0 +1,9 @@
+
+<!-- Si inizia sempre con la dichiarazione che specifica che il documento è in formato XML e assicura che i parser XML lo leggano correttamente. -->
+<?xml version="1.0"?>
+
+<!-- NODO PRINCIPALE: definisco il robot che ha come figli tutti gli altri link ecc... -->
+<robot name="Real_Mega_FUFI">
+   
+<!-- Chiudoil nodo robot, così lui capisce che il robot è finito -->
+</robot>
