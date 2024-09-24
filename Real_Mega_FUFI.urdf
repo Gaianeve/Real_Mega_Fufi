@@ -1,19 +1,15 @@
 
 <!-- Si inizia sempre con la dichiarazione che specifica che il documento è in formato XML e assicura che i parser XML lo leggano correttamente. -->
 <?xml version="1.0"?>
-
 <!-- NODO PRINCIPALE: definisco il robot che ha come figli tutti gli altri link ecc... -->
 <robot name="Real_Mega_FUFI">
-
     <!-- oggetto (link) cart: una scatola ciano posizionata nell'origine  -->
     <link name = "cart">
-
         <!--massa(kg), momento angolare (kg m^2)-->
         <inertial>
             <mass value="1"/>
             <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
         </inertial>
-
         <!--rappresentazione fisica per fare i conti più veloce-->    
         <collision>
             <geometry>
@@ -21,7 +17,6 @@
             </geometry>
             <origin xyz="0 0 0"/>
         </collision>
-
         <!-- rappresentazione fisica bellina da vedere-->    
         <visual>
             <geometry>
@@ -32,12 +27,10 @@
                 <color rgba="0 1 1 0.5"/>
             </material>
         </visual>
-
     </link>
 
     <!-- oggetto pole: arancione nel centro del cart-->
     <link name="pole">
-
         <visual>
             <geometry>
             <box size="0.05 0.05 1.0"/>	
@@ -47,20 +40,17 @@
             <color rgba="1 0.5 0 1"/>
             </material>
         </visual>
-
         <inertial>
         <origin xyz="0 0 0.5"/>
             <mass value="0.1"/>
             <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
         </inertial>
-
         <collision>
             <geometry>
             <box size="0.05 0.05 1.0"/>
             </geometry>
             <origin rpy="0 0 0" xyz="0 0 0.5"/>
         </collision>
-
      </link>
 
     <!--Aggiungo un giunto tra cart e pole che sia continuo, così che il pole ruoti liberamente attorno al suo asse ma stando attaccato al cart-->
