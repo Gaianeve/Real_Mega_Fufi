@@ -115,7 +115,7 @@
     <collision name="PIP_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <geometry>
-        <mesh filename="../Cylinder.stl" scale="1.00000 1.00000 0.83333"/>
+        <mesh filename="Robot/PIPPA/Cylinder.stl" scale="1.00000 1.00000 0.83333"/>
       </geometry>
     </collision>
     <inertial>
@@ -127,7 +127,7 @@
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <material name="Material.010"/>
       <geometry>
-        <mesh filename="../Cylinder.stl" scale="1.00000 1.00000 0.83333"/>
+        <mesh filename="Robot/PIPPA/Cylinder.stl" scale="1.00000 1.00000 0.83333"/>
       </geometry>
     </visual>
   </link>
