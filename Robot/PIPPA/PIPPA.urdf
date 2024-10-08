@@ -1,4 +1,5 @@
-<robot name="PIPPA" version="1.0">
+<?xml version="1.0"?>
+<robot name="PIPPA"> 
   <joint name="Bottom_straight_to_1" type="fixed">
     <origin rpy="1.57080 0.00000 1.57080" xyz="0.00000 0.00000 0.00000"/>
     <parent link="Bottom_straight_link"/>
