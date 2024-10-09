@@ -94,21 +94,21 @@
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="8.60000"/>
+      <mass value="0.0"/>
     </inertial>
   </link>
   <link name="Bottom_Link_2">
     <inertial>
       <inertia ixx="0.00100" ixy="-0.00000" ixz="0.00000" iyy="0.00100" iyz="-0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="8.60000"/>
+      <mass value="0.0"/>
     </inertial>
   </link>
   <link name="Bottom_Link_3">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="8.60000"/>
+      <mass value="0.0"/>
     </inertial>
   </link>
   <link name="Bottom_straight_link">
@@ -135,42 +135,42 @@
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="0.05690"/>
+      <mass value="8.6"/>
     </inertial>
   </link>
   <link name="Colonna_Link_2">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="-0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="0.05690"/>
+      <mass value="8.6"/>
     </inertial>
   </link>
   <link name="Colonna_Link_3">
     <inertial>
       <inertia ixx="0.00100" ixy="-0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="0.05690"/>
+      <mass value="8.6"/>
     </inertial>
   </link>
   <link name="Cover_Link1">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="15.42300"/>
+      <mass value="0.78"/>
     </inertial>
   </link>
   <link name="Cover_Link_2">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="15.42300"/>
+      <mass value="0.78"/>
     </inertial>
   </link>
   <link name="Cover_Link_3">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="15.42300"/>
+      <mass value="0.78"/>
     </inertial>
   </link>
 
@@ -179,7 +179,7 @@
       <inertial>
         <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
         <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
-        <mass value="1.61450"/>
+        <mass value="0.0569"/>
       </inertial>
       <collision_margin value="0.005"/>   <!-- Margine di collisione -->
       <repulsion_stiffness value="1000.0"/>  <!-- Rigidità di repulsione -->
@@ -192,7 +192,7 @@
       <inertial>
         <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
         <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-        <mass value="1.61450"/>
+        <mass value="0.0569"/>
       </inertial>
       <collision_margin value="0.005"/>   <!-- Margine di collisione -->
       <repulsion_stiffness value="1000.0"/>  <!-- Rigidità di repulsione -->
@@ -205,7 +205,7 @@
       <inertial>
         <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
         <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-        <mass value="1.61450"/>
+        <mass value="0.0569"/>
       </inertial>
       <collision_margin value="0.005"/>   <!-- Margine di collisione -->
       <repulsion_stiffness value="1000.0"/>  <!-- Rigidità di repulsione -->
@@ -219,26 +219,44 @@
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
-      <mass value="0.78000"/>
+      <mass value="1.6145"/>
     </inertial>
   </link>
   <link name="Gamba_Link_2">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="0.78000"/>
+      <mass value="1.6145"/>
     </inertial>
   </link>
   <link name="Gamba_Link_3">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="0.78000"/>
+      <mass value="1.6145"/>
     </inertial>
   </link>
-  <link name="Top_Link_1"/>
-  <link name="Top_Link_2"/>
-  <link name="Top_Link_3"/>
+  <link name="Top_Link_1">
+    <inertial>
+      <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <mass value="15.423"/>
+    </inertial>
+  </link>
+  <link name="Top_Link_2">
+    <inertial>
+      <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <mass value="15.423"/>
+    </inertial>
+  </link>
+  <link name="Top_Link_3">
+    <inertial>
+      <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <mass value="15.423"/>
+    </inertial>
+  </link>
   <material name="Material.010">
     <color rgba="0.80000 0.14118 0.00000 1.00000"/>
   </material>
