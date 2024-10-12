@@ -1,9 +1,5 @@
 <?xml version="1.0"?>
 <robot name="PIPPA"> 
-  <joint name="base_to_ground" type="floating">
-    <parent link="world"/>
-    <child link="Bottom_straight_link"/>
-  </joint>
   <joint name="Bottom_straight_to_1" type="fixed">
     <origin rpy="1.57080 0.00000 1.57080" xyz="0.00000 0.00000 0.00000"/>
     <parent link="Bottom_straight_link"/>
@@ -94,6 +90,12 @@
     <parent link="Colonna_Link_3"/>
     <child link="Elastic_Joint_link_3"/>
   </joint>
+
+  <joint name="base_to_ground" type="floating">
+    <parent link="world"/>
+    <child link="Bottom_straight_link"/>
+  </joint>
+
   <link name="Bottom_Link_1">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
