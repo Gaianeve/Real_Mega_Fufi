@@ -90,12 +90,6 @@
     <parent link="Colonna_Link_3"/>
     <child link="Elastic_Joint_link_3"/>
   </joint>
-
-  <joint name="base_to_ground" type="floating">
-    <parent link="world"/>
-    <child link="Bottom_straight_link"/>
-  </joint>
-
   <link name="Bottom_Link_1">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
