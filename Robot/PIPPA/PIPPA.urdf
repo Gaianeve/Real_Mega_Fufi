@@ -1,155 +1,136 @@
 <?xml version="1.0"?>
 <robot name="PIPPA"> 
+
   <joint name="Bottom_straight_to_1" type="fixed">
-    <origin rpy="1.57080 0.00000 1.57080" xyz="0.00000 0.00000 0.00000"/>
-    <parent link="Bottom_straight_link"/>
+    <origin rpy="1.57080 0.00000 1.57080" xyz="-0.42500 0.00000 0.00000"/>
+    <parent link="Colonna_Link_1"/>
     <child link="Bottom_Link_1"/>
   </joint>
   <joint name="Bottom_straight_to__3" type="fixed">
-    <origin rpy="1.57080 0.00000 -0.52360" xyz="0.00000 0.00000 0.00000"/>
-    <parent link="Bottom_straight_link"/>
+    <origin rpy="1.57080 0.00000 -0.52360" xyz="0.21250 0.36750 0.00000"/>
+    <parent link="Colonna_Link_3"/>
     <child link="Bottom_Link_3"/>
   </joint>
   <joint name="Bottom_stright_to_2" type="fixed">
-    <origin rpy="1.57080 0.00000 -2.61799" xyz="0.00000 0.00000 0.00000"/>
-    <parent link="Bottom_straight_link"/>
+    <origin rpy="1.57080 0.00000 -2.61799" xyz="0.21250 -0.36750 0.00000"/>
+    <parent link="Colonna_Link_2"/>
     <child link="Bottom_Link_2"/>
   </joint>
   <joint name="Bottom_to_Column_1" type="fixed">
-    <origin rpy="-1.57080 -1.57080 0.00000" xyz="-0.00000 0.00000 0.42500"/>
-    <parent link="Bottom_Link_1"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 -0.20000"/>
+    <parent link="Elastic_Joint_Link_1"/>
     <child link="Colonna_Link_1"/>
   </joint>
   <joint name="Bottom_to_column3" type="fixed">
-    <origin rpy="-1.57080 0.52360 -0.00000" xyz="-0.00028 0.00000 0.42451"/>
-    <parent link="Bottom_Link_3"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 -0.20000"/>
+    <parent link="Elastic_Joint_link_3"/>
     <child link="Colonna_Link_3"/>
   </joint>
   <joint name="Bottom_to_column_2" type="fixed">
-    <origin rpy="1.57080 0.52360 3.14159" xyz="0.00028 0.00000 0.42451"/>
-    <parent link="Bottom_Link_2"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 -0.20000"/>
+    <parent link="Elastic_Joint_link_2"/>
     <child link="Colonna_Link_2"/>
   </joint>
   <joint name="Cover_to_leg_1" type="fixed">
-    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.66000"/>
-    <parent link="Gamba_Link_1"/>
+    <origin rpy="0.00000 -1.57080 0.00000" xyz="0.10300 0.00000 0.42500"/>
+    <parent link="Top_Link_1"/>
     <child link="Cover_Link1"/>
   </joint>
   <joint name="Cover_to_leg_2" type="fixed">
-    <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.66000"/>
-    <parent link="Gamba_Link_2"/>
+    <origin rpy="1.57080 0.52360 -1.57080" xyz="0.10300 0.00028 0.42451"/>
+    <parent link="Top_Link_2"/>
     <child link="Cover_Link_2"/>
   </joint>
   <joint name="Cover_to_leg_3" type="fixed">
-    <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.66000"/>
-    <parent link="Gamba_Link_3"/>
+    <origin rpy="-1.57080 0.52360 1.57080" xyz="0.10300 -0.00028 0.42451"/>
+    <parent link="Top_Link_3"/>
     <child link="Cover_Link_3"/>
   </joint>
   <joint name="Cover_to_top_1" type="fixed">
-    <origin rpy="-0.00000 1.57080 0.00000" xyz="-0.42500 0.00000 0.10300"/>
-    <parent link="Cover_Link1"/>
+    <origin rpy="-3.14159 -1.57080 0.00000" xyz="0.00000 0.00000 0.00000"/>
+    <parent link="Top_core"/>
     <child link="Top_Link_1"/>
   </joint>
   <joint name="Cover_to_top_2" type="fixed">
-    <origin rpy="-2.09440 1.57080 0.00000" xyz="0.21250 -0.36750 0.10300"/>
-    <parent link="Cover_Link_2"/>
+    <origin rpy="-0.35088 -1.57080 1.39808" xyz="0.00000 0.00000 0.00000"/>
+    <parent link="Top_core"/>
     <child link="Top_Link_2"/>
   </joint>
   <joint name="Cover_to_top_3" type="fixed">
-    <origin rpy="2.09439 1.57080 0.00000" xyz="0.21250 0.36750 0.10300"/>
-    <parent link="Cover_Link_3"/>
+    <origin rpy="-1.04720 -1.57080 0.00000" xyz="0.00000 0.00000 0.00000"/>
+    <parent link="Top_core"/>
     <child link="Top_Link_3"/>
   </joint>
   <joint name="Leg_to_elastic_1" type="fixed">
-    <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.08000"/>
-    <parent link="Elastic_Joint_Link_1"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 -0.66000"/>
+    <parent link="Cover_Link1"/>
     <child link="Gamba_Link_1"/>
   </joint>
   <joint name="Leg_to_elastic_2" type="fixed">
-    <origin rpy="-0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.08000"/>
-    <parent link="Elastic_Joint_link_2"/>
+    <origin rpy="0.00000 0.00000 -0.00000" xyz="-0.00000 -0.00000 -0.66000"/>
+    <parent link="Cover_Link_2"/>
     <child link="Gamba_Link_2"/>
   </joint>
   <joint name="Leg_to_elastic_3" type="fixed">
-    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.08000"/>
-    <parent link="Elastic_Joint_link_3"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 -0.66000"/>
+    <parent link="Cover_Link_3"/>
     <child link="Gamba_Link_3"/>
   </joint>
   <joint name="elastic_to_column_1" type="fixed">
-    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.20000"/>
-    <parent link="Colonna_Link_1"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 -0.08000"/>
+    <parent link="Gamba_Link_1"/>
     <child link="Elastic_Joint_Link_1"/>
   </joint>
   <joint name="elastic_to_column_2" type="fixed">
-    <origin rpy="0.00000 0.00000 -0.00000" xyz="0.00000 0.00000 0.20000"/>
-    <parent link="Colonna_Link_2"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 -0.08000"/>
+    <parent link="Gamba_Link_2"/>
     <child link="Elastic_Joint_link_2"/>
   </joint>
   <joint name="elastic_to_column_3" type="fixed">
-    <origin rpy="0.00000 0.00000 -0.00000" xyz="0.00000 0.00000 0.20000"/>
-    <parent link="Colonna_Link_3"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 -0.08000"/>
+    <parent link="Gamba_Link_3"/>
     <child link="Elastic_Joint_link_3"/>
   </joint>
+
   <link name="Bottom_Link_1">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="0.0"/>
+      <mass value="24.833333"/>
     </inertial>
-  </link>
-  <link name="Bottom_Link_2">
+    <link name="Bottom_Link_2">
     <inertial>
       <inertia ixx="0.00100" ixy="-0.00000" ixz="0.00000" iyy="0.00100" iyz="-0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="0.0"/>
+      <mass value="24.833333"/>
     </inertial>
   </link>
   <link name="Bottom_Link_3">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="0.0"/>
+      <mass value="24.833333"/>
     </inertial>
-  </link>
-  <link name="Bottom_straight_link">
-    <collision name="PIP_collision">
-      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.stl" scale="1.00000 1.00000 0.83333"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
-      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="74.50000"/>
-    </inertial>
-    <visual name="PIP">
-      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <material name="Material.010"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.stl" scale="1.00000 1.00000 0.83333"/>
-      </geometry>
-    </visual>
   </link>
   <link name="Colonna_Link_1">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="8.6"/>
+      <mass value="8.60000"/>
     </inertial>
   </link>
   <link name="Colonna_Link_2">
     <inertial>
-      <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="-0.00000" izz="0.00100"/>
+      <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="8.6"/>
+      <mass value="8.60000"/>
     </inertial>
   </link>
   <link name="Colonna_Link_3">
     <inertial>
-      <inertia ixx="0.00100" ixy="-0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
+      <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="8.6"/>
+      <mass value="8.60000"/>
     </inertial>
   </link>
   <link name="Cover_Link1">
@@ -173,7 +154,7 @@
       <mass value="0.78"/>
     </inertial>
   </link>
-
+  
   <link name="Elastic_Joint_Link_1">
     <deformable name="Elastic_1">
       <inertial>
@@ -240,22 +221,42 @@
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="15.423"/>
+      <mass value="3.223"/>
     </inertial>
   </link>
   <link name="Top_Link_2">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="15.423"/>
+      <mass value="3.223"/>
     </inertial>
   </link>
   <link name="Top_Link_3">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="15.423"/>
+      <mass value="3.223"/>
     </inertial>
+  </link>
+  <link name="Top_core">
+    <collision name="PIP_collision">
+      <origin rpy="3.14159 0.00000 0.00000" xyz="0.00000 0.00000 1.04300"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.stl" scale="1.00000 1.00000 0.83333"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <mass value="36.6000"/>
+    </inertial>
+    <visual name="PIP">
+      <origin rpy="3.14159 0.00000 0.00000" xyz="0.00000 0.00000 1.04300"/>
+      <material name="Material.010"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.stl" scale="1.00000 1.00000 0.83333"/>
+      </geometry>
+    </visual>
   </link>
   <material name="Material.010">
     <color rgba="0.80000 0.14118 0.00000 1.00000"/>
