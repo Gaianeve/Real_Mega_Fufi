@@ -98,6 +98,8 @@
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <mass value="24.833333"/>
     </inertial>
+  </link>
+
     <link name="Bottom_Link_2">
     <inertial>
       <inertia ixx="0.00100" ixy="-0.00000" ixz="0.00000" iyy="0.00100" iyz="-0.00000" izz="0.00100"/>
@@ -105,6 +107,7 @@
       <mass value="24.833333"/>
     </inertial>
   </link>
+
   <link name="Bottom_Link_3">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -112,6 +115,7 @@
       <mass value="24.833333"/>
     </inertial>
   </link>
+
   <link name="Colonna_Link_1">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -119,6 +123,7 @@
       <mass value="8.60000"/>
     </inertial>
   </link>
+
   <link name="Colonna_Link_2">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -126,6 +131,7 @@
       <mass value="8.60000"/>
     </inertial>
   </link>
+
   <link name="Colonna_Link_3">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -133,6 +139,7 @@
       <mass value="8.60000"/>
     </inertial>
   </link>
+
   <link name="Cover_Link1">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -140,6 +147,7 @@
       <mass value="0.78"/>
     </inertial>
   </link>
+
   <link name="Cover_Link_2">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -147,6 +155,7 @@
       <mass value="0.78"/>
     </inertial>
   </link>
+
   <link name="Cover_Link_3">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -168,6 +177,7 @@
       <neohookean mu="76.92" lambda="115.38" damping="0.01"/>
     </deformable>
   </link>
+
   <link name="Elastic_Joint_link_2">
     <deformable name="Elastic_2">
       <inertial>
@@ -181,6 +191,7 @@
       <neohookean mu="76.92" lambda="115.38" damping="0.01"/>
     </deformable>
   </link>
+
   <link name="Elastic_Joint_link_3">
     <deformable name="Elastic_3">
       <inertial>
@@ -194,7 +205,6 @@
       <neohookean mu="76.92" lambda="115.38" damping="0.01"/>
     </deformable>
   </link>
-
 
   <link name="Gamba_Link_1">
     <inertial>
@@ -217,6 +227,7 @@
       <mass value="1.6145"/>
     </inertial>
   </link>
+
   <link name="Top_Link_1">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -224,6 +235,7 @@
       <mass value="3.223"/>
     </inertial>
   </link>
+
   <link name="Top_Link_2">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -231,6 +243,7 @@
       <mass value="3.223"/>
     </inertial>
   </link>
+
   <link name="Top_Link_3">
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -238,6 +251,7 @@
       <mass value="3.223"/>
     </inertial>
   </link>
+
   <link name="Top_core">
     <collision name="PIP_collision">
       <origin rpy="3.14159 0.00000 0.00000" xyz="0.00000 0.00000 1.04300"/>
@@ -258,6 +272,7 @@
       </geometry>
     </visual>
   </link>
+
   <material name="Material.010">
     <color rgba="0.80000 0.14118 0.00000 1.00000"/>
   </material>
