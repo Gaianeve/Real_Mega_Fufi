@@ -382,11 +382,12 @@
     </visual>
   </link>
 
-  <link name="Gamba_Link_3"><inertial>
-      <inertia ixx="0.003" ixy="0.000" ixz="0.000" iyy="0.003" iyz="0.000" izz="0.003"/>
-      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
-      <mass value="9.669"/>
-    </inertial>
+  <link name="Gamba_Link_3">
+  <collision name="Gamba 2_collision">
+      <origin rpy="0.000 0.000 -2.645" xyz="0.000 0.000 0.347"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.025.stl" scale="0.030 0.030 0.330"/>
+      </geometry>
     </collision>
      <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
