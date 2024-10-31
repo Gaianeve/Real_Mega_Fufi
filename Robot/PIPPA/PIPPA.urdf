@@ -420,7 +420,7 @@
       <origin rpy="-1.571 0.000 1.571" xyz="-0.020 0.000 0.255"/>
       <material name="Material.004"/>
       <geometry>
-        <mesh filename="Robot/PIPPA//Cube.006.stl" scale="0.020 0.170 0.015"/>
+        <mesh filename="Robot/PIPPA/Cube.006.stl" scale="0.020 0.170 0.015"/>
       </geometry>
     </visual>
   </link>
