@@ -101,7 +101,7 @@
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="24.83"/>
+      <mass value="18.625"/>
     </inertial>
   </link>
 
@@ -109,7 +109,7 @@
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="24.83"/>
+      <mass value="18.625"/>
     </inertial> 
   </link>
 
@@ -117,7 +117,7 @@
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
-      <mass value="24.83"/>
+      <mass value="18.625"/>
     </inertial>
   </link>
 
@@ -130,9 +130,9 @@
       </geometry>
     </collision>
     <inertial>
-      <inertia ixx="0.000" ixy="0.000" ixz="0.000" iyy="0.000" iyz="0.000" izz="0.000"/>
+      <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
-      <mass value="0"/>
+      <mass value="18.625"/>
     </inertial>
     <visual name="Bottom Disk">
       <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
