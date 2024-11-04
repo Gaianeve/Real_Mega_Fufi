@@ -56,7 +56,7 @@ class HistoryWrapper(gym.Wrapper):
         obs, reward, done, info = self.env.step(action)
         
         #check obs are in the right form for concatenation
-        if obs.shape != (3,):
+        if obs.shape != (12,):
           obs = obs.ravel()
             
         self.history.pop(0)
