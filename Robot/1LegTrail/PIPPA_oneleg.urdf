@@ -1,87 +1,87 @@
 <?xml version="1.0"?>
-<robot name="PIPPA_oneleg"> 
+<robot name="PIPPA_oneleg">
 
-<!-- Joints -->
-  <joint name="Gamba_Link_joint" type="fixed">
-    <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.075"/>
-    <parent link="Giunto_Link"/>
-    <child link="Gamba_Link"/>
-  </joint>
-  <joint name="Giunto_Link_joint" type="fixed">
-    <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.185"/>
+  <!-- Joint tra Colonna e Giunto (fisso) -->
+  <joint name="Colonna_Giunto_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.2"/> <!-- Colonna è alta 0.2 m -->
     <parent link="Link_colonna"/>
     <child link="Giunto_Link"/>
   </joint>
 
-  <!-- Links -->
-  <link name="Gamba_Link">
-    <collision name="Gamba 1_collision">
-      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.342"/>
-      <geometry>
-        <mesh filename="Robot/1LegTrail/Cylinder.007.stl" scale="0.030 0.030 0.330"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
-      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
-      <mass value="1.6145"/>
-    </inertial>
-    <visual name="Gamba 1">
-      <origin rpy="0.000 0.000 1.571" xyz="0.000 0.000 0.342"/>
-      <material name="Material.001"/>
-      <geometry>
-        <mesh filename="Robot/1LegTrail/Cylinder.007.stl" scale="0.030 0.030 0.330"/>
-      </geometry>
-    </visual>
-  </link>
+  <!-- Joint tra Giunto e Gamba (fisso) -->
+  <joint name="Giunto_Gamba_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.08"/> <!-- Giunto è alto 0.08 m -->
+    <parent link="Giunto_Link"/>
+    <child link="Gamba_Link"/>
+  </joint>
 
-  <link name="Giunto_Link">
-    <collision name="Giunto 1_collision">
-      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.015"/>
-      <geometry>
-        <mesh filename="Robot/1LegTrail/Cylinder.001.stl" scale="0.006 0.005 0.040"/>
-      </geometry>
-    </collision>
-    <deformable name="Giunto_elastico">
-      <inertial>
-        <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
-        <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
-        <mass value="0.0569"/>
-      </inertial>
-      <collision_margin value="0.005"/>   <!-- Margine di collisione -->
-      <repulsion_stiffness value="1000.0"/>  <!-- Rigidità di repulsione -->
-      <friction value="0.5"/>                <!-- Coefficiente di attrito -->
-      <neohookean mu="76.92" lambda="115.38" damping="0.01"/>
-    </deformable>
-    <visual name="Giunto 1">
-      <origin rpy="0.000 0.000 1.571" xyz="0.000 0.000 0.040"/>
-      <material name="Material.003"/>
-      <geometry>
-        <mesh filename="Robot/1LegTrail/Cylinder.001.stl" scale="0.006 0.005 0.040"/>
-      </geometry>
-    </visual>
-  </link>
-
+  <!-- Link Colonna -->
   <link name="Link_colonna">
-    <collision name="Colonna 1_collision">
-      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.100"/>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.1"/> <!-- Colonna alta 0.2, metà altezza = 0.1 -->
       <geometry>
-        <mesh filename="Robot/1LegTrail/Cylinder.002.stl" scale="0.060 0.060 0.100"/>
+        <cylinder radius="0.06" length="0.2"/> <!-- Diametro 0.12 m -->
+      </geometry>
+      <material name="Material.001"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.1"/>
+      <geometry>
+        <cylinder radius="0.06" length="0.2"/>
       </geometry>
     </collision>
     <inertial>
-      <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="-0.00000" izz="0.00100"/>
-      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <origin rpy="0 0 0" xyz="0 0 0.1"/>
       <mass value="8.6"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
-    <visual name="Colonna 1">
-      <origin rpy="0.000 0.000 1.571" xyz="0.000 0.000 0.100"/>
-      <material name="Material.001"/>
-      <geometry>
-        <mesh filename="Robot/1LegTrail/Cylinder.002.stl" scale="0.060 0.060 0.100"/>
-      </geometry>
-    </visual>
   </link>
+
+  <!-- Link Giunto -->
+  <link name="Giunto_Link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.04"/> <!-- Giunto alto 0.08, metà altezza = 0.04 -->
+      <geometry>
+        <cylinder radius="0.0055" length="0.08"/> <!-- Diametro 0.011 m -->
+      </geometry>
+      <material name="Material.003"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.04"/>
+      <geometry>
+        <cylinder radius="0.0055" length="0.08"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.04"/>
+      <mass value="0.0569"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Link Gamba -->
+  <link name="Gamba_Link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.3375"/> <!-- Gamba alta 0.675, metà altezza = 0.3375 -->
+      <geometry>
+        <cylinder radius="0.03" length="0.675"/> <!-- Diametro 0.06 m -->
+      </geometry>
+      <material name="Material.001"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.3375"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.675"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.3375"/>
+      <mass value="1.6145"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Materiali -->
   <material name="Material.001">
     <color rgba="0.800 0.243 0.000 1.000"/>
   </material>
