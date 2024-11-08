@@ -52,11 +52,17 @@
         <cylinder radius="0.0055" length="0.08"/>
       </geometry>
     </collision>
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0.04"/>
-      <mass value="0.0569"/>
-      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
-    </inertial>
+    <deformable name="Elastic_1">
+      <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0.04"/>
+        <mass value="0.0569"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision_margin value="0.005"/>   <!-- Margine di collisione -->
+      <repulsion_stiffness value="1000.0"/>  <!-- Rigidità di repulsione -->
+      <friction value="0.5"/>                <!-- Coefficiente di attrito -->
+      <neohookean mu="76.92" lambda="115.38" damping="0.01"/>
+    </deformable>
   </link>
 
   <!-- Link Gamba -->
