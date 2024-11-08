@@ -1,3 +1,0 @@
-Instantiated with filepath=None->None, scale=[0.005502500105649233, 0.005499999970197678, 0.03999999910593033], mesh=<bpy_struct, Mesh("Cylinder.023") at 0x71b149bb0008>, meshname=Cylinder.023, material=None, mesh_orientation=None, {}
-->trying export of <bpy_struct, Mesh("Cylinder.023") at 0x71b149bb0008> to /home/gaia/Scrivania/Tesi/PC_universe/Real_Mega_Fufi/PINA/meshes/stl/Cylinder.023.stl
-->wrote stl to /home/gaia/Scrivania/Tesi/PC_universe/Real_Mega_Fufi/PINA/meshes/stl/Cylinder.023.stl from bpy_types.Mesh
