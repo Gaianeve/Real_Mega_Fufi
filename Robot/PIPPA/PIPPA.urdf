@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <robot name="PIPPA"> 
+
   <joint name="Bottom_to_Column_1" type="fixed">
     <origin rpy="0.000 0.000 0.000" xyz="-0.000 0.000 -0.200"/>
     <parent link="Elastic_Joint_Link_1"/>
@@ -21,14 +22,14 @@
     <child link="Bottom_Link_1"/>
   </joint>
   <joint name="Center_to_bottom2" type="fixed">
-    <origin rpy="1.571 -0.000 -2.618" xyz="0.212 -0.368 0.000"/>
+    <origin rpy="1.571 0.000 -2.618" xyz="0.212 -0.368 0.000"/>
     <parent link="Colonna_Link_2"/>
     <child link="Bottom_Link_2"/>
   </joint>
   <joint name="Cover_to_leg_1" type="fixed">
     <origin rpy="0.000 -1.571 0.000" xyz="0.103 0.000 0.425"/>
     <parent link="Top_Link_1"/>
-    <child link="Cover_Link1"/>
+    <child link="Cover_Link_1"/>
   </joint>
   <joint name="Cover_to_leg_2" type="fixed">
     <origin rpy="1.571 0.524 -1.571" xyz="0.103 0.000 0.425"/>
@@ -42,22 +43,22 @@
   </joint>
   <joint name="Cover_to_top_1" type="fixed">
     <origin rpy="-3.142 -1.571 0.000" xyz="0.000 0.000 0.000"/>
-    <parent link="Top_core"/>
+    <parent link="Top_core_Link"/>
     <child link="Top_Link_1"/>
   </joint>
   <joint name="Cover_to_top_2" type="fixed">
     <origin rpy="-0.351 -1.571 1.398" xyz="0.000 0.000 0.000"/>
-    <parent link="Top_core"/>
+    <parent link="Top_core_Link"/>
     <child link="Top_Link_2"/>
   </joint>
   <joint name="Cover_to_top_3" type="fixed">
     <origin rpy="-1.047 -1.571 0.000" xyz="0.000 0.000 0.000"/>
-    <parent link="Top_core"/>
+    <parent link="Top_core_Link"/>
     <child link="Top_Link_3"/>
   </joint>
   <joint name="Leg_to_elastic_1" type="fixed">
     <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 -0.660"/>
-    <parent link="Cover_Link1"/>
+    <parent link="Cover_Link_1"/>
     <child link="Gamba_Link_1"/>
   </joint>
   <joint name="Leg_to_elastic_2" type="fixed">
@@ -71,7 +72,7 @@
     <child link="Gamba_Link_3"/>
   </joint>
   <joint name="center_to_bottom3" type="fixed">
-    <origin rpy="1.571 0.000 -0.524" xyz="0.212 0.368 0.000"/>
+    <origin rpy="2.094 1.571 0.000" xyz="0.212 0.368 0.000"/>
     <parent link="Colonna_Link_3"/>
     <child link="Bottom_Link_3"/>
   </joint>
@@ -91,9 +92,8 @@
     <child link="Elastic_Joint_link_3"/>
   </joint>
 
-  <!-- Bottom disk links -->
   <link name="Bottom_Link_1">
-    <inertial>
+   <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <mass value="24.83"/>
@@ -102,169 +102,173 @@
 
   <link name="Bottom_Link_2">
     <collision name="Bottom Disk_collision">
-      <origin rpy="1.571 0.524 -3.142" xyz="-0.000 -0.000 0.000"/>
+      <origin rpy="1.571 0.524 -3.142" xyz="0.000 -0.000 0.000"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.033.stl" scale="1.000 1.000 0.833"/>
+        <mesh filename="Robot/PIPPA/Cylinder.017.stl" scale="1.000 1.000 0.833"/>
       </geometry>
     </collision>
+    <visual name="Bottom Disk">
+      <origin rpy="1.571 0.524 -3.142" xyz="-0.000 -0.000 0.000"/>
+      <material name="Material.001"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.017.stl" scale="1.000 1.000 0.833"/>
+      </geometry>
+    </visual>
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <mass value="24.83"/>
     </inertial>
-    <visual name="Bottom Disk">
-      <origin rpy="1.571 0.524 -3.142" xyz="-0.000 -0.000 0.000"/>
-      <material name="Material.002"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.033.stl" scale="1.000 1.000 0.833"/>
-      </geometry>
-    </visual>
   </link>
-
   <link name="Bottom_Link_3">
-   <inertial>
+    <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <mass value="24.83"/>
-    </inertial>
+      </inertial>
   </link>
 
-  <!-- Column links -->
   <link name="Colonna_Link_1">
     <collision name="Colonna 1_collision">
-      <origin rpy="0.000 0.000 1.571" xyz="0.000 0.000 0.125"/>
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.125"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.032.stl" scale="0.060 0.060 0.100"/>
+        <mesh filename="Robot/PIPPA/Cylinder.016.stl" scale="0.060 0.060 0.100"/>
       </geometry>
     </collision>
+    <visual name="Colonna 1">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.125"/>
+      <material name="Material.003"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.016.stl" scale="0.060 0.060 0.100"/>
+      </geometry>
+    </visual>
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="-0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <mass value="8.6"/>
     </inertial>
-    <visual name="Colonna 1">
-      <origin rpy="0.000 0.000 1.571" xyz="0.000 0.000 0.125"/>
-      <material name="Material.004"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.032.stl" scale="0.060 0.060 0.100"/>
-      </geometry>
-    </visual>
   </link>
 
   <link name="Colonna_Link_2">
-    <collision name="Colonna 3_collision">
-      <origin rpy="0.000 0.000 -2.645" xyz="-0.000 0.000 0.125"/>
+    <collision name="Colonna 2_collision">
+      <origin rpy="0.000 0.000 0.000" xyz="-0.000 0.000 0.125"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.030.stl" scale="0.060 0.060 0.100"/>
+        <mesh filename="Robot/PIPPA/Cylinder.014.stl" scale="0.060 0.060 0.100"/>
       </geometry>
     </collision>
+    <visual name="Colonna 2">
+      <origin rpy="0.000 0.000 0.000" xyz="-0.000 0.000 0.125"/>
+      <material name="Material.003"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.014.stl" scale="0.060 0.060 0.100"/>
+      </geometry>
+    </visual>
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="-0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <mass value="8.6"/>
     </inertial>
-    <visual name="Colonna 3">
-      <origin rpy="0.000 0.000 -2.645" xyz="-0.000 0.000 0.125"/>
-      <material name="Material.004"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.030.stl" scale="0.060 0.060 0.100"/>
-      </geometry>
-    </visual>
   </link>
 
   <link name="Colonna_Link_3">
-    <collision name="Colonna 2_collision">
-      <origin rpy="0.000 0.000 -0.536" xyz="-0.000 0.000 0.125"/>
+    <collision name="Colonna 3_collision">
+      <origin rpy="0.000 0.000 0.000" xyz="-0.000 0.000 0.125"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.031.stl" scale="0.060 0.060 0.100"/>
+        <mesh filename="Robot/PIPPA/Cylinder.015.stl" scale="0.060 0.060 0.100"/>
       </geometry>
     </collision>
+    <visual name="Colonna 3">
+      <origin rpy="0.000 0.000 0.000" xyz="-0.000 0.000 0.125"/>
+      <material name="Material.003"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.015.stl" scale="0.060 0.060 0.100"/>
+      </geometry>
+    </visual>
     <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="-0.00000" iyy="0.00100" iyz="-0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <mass value="8.6"/>
     </inertial>
-    <visual name="Colonna 2">
-      <origin rpy="0.000 0.000 -0.536" xyz="-0.000 0.000 0.125"/>
-      <material name="Material.004"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.031.stl" scale="0.060 0.060 0.100"/>
-      </geometry>
-    </visual>
   </link>
 
-  <!-- Cover links -->
-  <link name="Cover_Link1">
+  <link name="Cover_Link_1">
     <collision name="Cover 1_collision">
       <origin rpy="0.000 0.000 1.571" xyz="0.000 0.000 0.122"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.029.stl" scale="0.030 0.030 0.105"/>
+        <mesh filename="Robot/PIPPA/Cylinder.013.stl" scale="0.030 0.030 0.105"/>
       </geometry>
     </collision>
+    <visual name="Cover 1">
+      <origin rpy="0.000 0.000 1.571" xyz="-0.000 0.000 0.122"/>
+      <material name="Material.001"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.013.stl" scale="0.030 0.030 0.105"/>
+      </geometry>
+    </visual>
     <inertial>
       <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
       <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
       <mass value="0.78"/>
     </inertial>
-    <visual name="Cover 1">
-      <origin rpy="0.000 0.000 1.571" xyz="-0.000 0.000 0.122"/>
-      <material name="Material.002"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.029.stl" scale="0.030 0.030 0.105"/>
-      </geometry>
-    </visual>
   </link>
 
   <link name="Cover_Link_2">
-    <collision name="Cover 3_collision">
-      <origin rpy="-0.000 -0.000 -2.645" xyz="0.000 0.000 0.122"/>
+    <collision name="Cover 2_collision">
+      <origin rpy="-0.000 -0.000 -2.645" xyz="0.000 0.000 0.085"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.027.stl" scale="0.030 0.030 0.105"/>
+        <mesh filename="Robot/PIPPA/Cylinder.009.stl" scale="0.030 0.030 0.105"/>
       </geometry>
     </collision>
+    <visual name="Cover 2">
+      <origin rpy="-0.000 -0.000 -2.645" xyz="0.000 -0.000 0.122"/>
+      <material name="Material.001"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.009.stl" scale="0.030 0.030 0.105"/>
+      </geometry>
+    </visual>
     <inertial>
       <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
       <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
       <mass value="0.78"/>
     </inertial>
-    <visual name="Cover 3">
-      <origin rpy="-0.000 -0.000 -2.645" xyz="0.000 -0.000 0.122"/>
-      <material name="Material.002"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.027.stl" scale="0.030 0.030 0.105"/>
-      </geometry>
-    </visual>
   </link>
 
   <link name="Cover_Link_3">
-    <collision name="Cover 2_collision">
+    <collision name="Cover 3_collision">
       <origin rpy="-0.000 0.000 -0.536" xyz="0.000 0.000 0.123"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.028.stl" scale="0.030 0.030 0.105"/>
+        <mesh filename="Robot/PIPPA/Cylinder.012.stl" scale="0.030 0.030 0.105"/>
       </geometry>
     </collision>
+    <visual name="Cover 3">
+      <origin rpy="-0.000 0.000 -0.536" xyz="0.000 0.000 0.123"/>
+      <material name="Material.001"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.012.stl" scale="0.030 0.030 0.105"/>
+      </geometry>
+    </visual>
     <inertial>
       <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
       <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
       <mass value="0.78"/>
     </inertial>
-    <visual name="Cover 2">
-      <origin rpy="-0.000 0.000 -0.536" xyz="0.000 0.000 0.123"/>
-      <material name="Material.002"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.028.stl" scale="0.030 0.030 0.105"/>
-      </geometry>
-    </visual>
+
   </link>
 
-  <!-- Elastic joints links defined as soft bosies-->
   <link name="Elastic_Joint_Link_1">
     <collision name="Giunto 1_collision">
-      <origin rpy="0.000 0.000 1.571" xyz="-0.000 0.000 0.050"/>
+      <origin rpy="0.000 0.000 0.000" xyz="-0.000 0.000 0.050"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.023.stl" scale="0.006 0.005 0.040"/>
+        <mesh filename="Robot/PIPPA/Cylinder.005.stl" scale="0.006 0.005 0.040"/>
       </geometry>
     </collision>
+    <visual name="Giunto 1">
+      <origin rpy="0.000 0.000 0.000" xyz="-0.000 0.000 0.050"/>
+      <material name="Material.006"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.005.stl" scale="0.006 0.005 0.040"/>
+      </geometry>
+    </visual>
     <deformable name="Elastic_1">
       <inertial>
         <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
@@ -276,23 +280,23 @@
       <friction value="0.5"/>                <!-- Coefficiente di attrito -->
       <neohookean mu="76.92" lambda="115.38" damping="0.01"/>
     </deformable>
-    <visual name="Giunto 1">
-      <origin rpy="0.000 0.000 1.571" xyz="-0.000 0.000 0.050"/>
-      <material name="Material.005"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.023.stl" scale="0.006 0.005 0.040"/>
-      </geometry>
-    </visual>
   </link>
 
   <link name="Elastic_Joint_link_2">
-    <collision name="Giunto 3_collision">
-      <origin rpy="0.000 0.000 -2.645" xyz="0.000 -0.000 0.050"/>
+    <collision name="Giunto 2_collision">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 -0.000 0.050"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.010.stl" scale="0.006 0.005 0.040"/>
+        <mesh filename="Robot/PIPPA/Cylinder.002.stl" scale="0.006 0.005 0.040"/>
       </geometry>
     </collision>
-    <deformable name="Elastic_1">
+    <visual name="Giunto 2">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 -0.000 0.050"/>
+      <material name="Material.006"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.002.stl" scale="0.006 0.005 0.040"/>
+      </geometry>
+    </visual>
+    <deformable name="Elastic_2">
       <inertial>
         <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
         <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
@@ -303,23 +307,23 @@
       <friction value="0.5"/>                <!-- Coefficiente di attrito -->
       <neohookean mu="76.92" lambda="115.38" damping="0.01"/>
     </deformable>
-    <visual name="Giunto 3">
-      <origin rpy="0.000 0.000 -2.645" xyz="0.000 -0.000 0.050"/>
-      <material name="Material.005"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.010.stl" scale="0.006 0.005 0.040"/>
-      </geometry>
-    </visual>
   </link>
 
   <link name="Elastic_Joint_link_3">
-    <collision name="Giunto 2_collision">
-      <origin rpy="0.000 0.000 -0.536" xyz="0.000 0.000 0.050"/>
+    <collision name="Giunto 3_collision">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.050"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.011.stl" scale="0.006 0.005 0.040"/>
+        <mesh filename="Robot/PIPPA/Cylinder.004.stl" scale="0.006 0.005 0.040"/>
       </geometry>
     </collision>
-    <deformable name="Elastic_1">
+    <visual name="Giunto 3">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.050"/>
+      <material name="Material.006"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.004.stl" scale="0.006 0.005 0.040"/>
+      </geometry>
+    </visual>
+    <deformable name="Elastic_3">
       <inertial>
         <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
         <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
@@ -330,170 +334,163 @@
       <friction value="0.5"/>                <!-- Coefficiente di attrito -->
       <neohookean mu="76.92" lambda="115.38" damping="0.01"/>
     </deformable>
-    <visual name="Giunto 2">
-      <origin rpy="0.000 0.000 -0.536" xyz="0.000 0.000 0.050"/>
-      <material name="Material.005"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.011.stl" scale="0.006 0.005 0.040"/>
-      </geometry>
-    </visual>
   </link>
 
-  <!-- Leg links -->
   <link name="Gamba_Link_1">
     <collision name="Gamba 1_collision">
-      <origin rpy="0.000 0.000 1.571" xyz="0.000 0.000 0.347"/>
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.347"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.026.stl" scale="0.030 0.030 0.330"/>
+        <mesh filename="Robot/PIPPA/Cylinder.008.stl" scale="0.030 0.030 0.330"/>
       </geometry>
     </collision>
-     <inertial>
+    <visual name="Gamba 1">
+      <origin rpy="0.000 0.000 0.000" xyz="-0.000 0.000 0.347"/>
+      <material name="Material.003"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.008.stl" scale="0.030 0.030 0.330"/>
+      </geometry>
+    </visual>
+    <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
       <mass value="1.6145"/>
     </inertial>
-    <visual name="Gamba 1">
-      <origin rpy="0.000 0.000 1.571" xyz="-0.000 0.000 0.347"/>
-      <material name="Material.004"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.026.stl" scale="0.030 0.030 0.330"/>
-      </geometry>
-    </visual>
   </link>
 
   <link name="Gamba_Link_2">
-    <collision name="Gamba 3_collision">
-      <origin rpy="0.000 0.000 -2.645" xyz="0.000 0.000 0.347"/>
+    <collision name="Gamba 2_collision">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.347"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.024.stl" scale="0.030 0.030 0.330"/>
+        <mesh filename="Robot/PIPPA/Cylinder.006.stl" scale="0.030 0.030 0.330"/>
       </geometry>
     </collision>
-     <inertial>
+    <visual name="Gamba 2">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 -0.000 0.347"/>
+      <material name="Material.003"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.006.stl" scale="0.030 0.030 0.330"/>
+      </geometry>
+    </visual>
+    <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
       <mass value="1.6145"/>
     </inertial>
-    <visual name="Gamba 3">
-      <origin rpy="0.000 0.000 -2.645" xyz="0.000 -0.000 0.347"/>
-      <material name="Material.004"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.024.stl" scale="0.030 0.030 0.330"/>
-      </geometry>
-    </visual>
   </link>
 
   <link name="Gamba_Link_3">
-  <collision name="Gamba 2_collision">
-      <origin rpy="0.000 0.000 -2.645" xyz="0.000 0.000 0.347"/>
+    <collision name="Gamba 3_collision">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.347"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.025.stl" scale="0.030 0.030 0.330"/>
+        <mesh filename="Robot/PIPPA/Cylinder.007.stl" scale="0.030 0.030 0.330"/>
       </geometry>
     </collision>
-     <inertial>
+    <visual name="Gamba 3">
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.347"/>
+      <material name="Material.003"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cylinder.007.stl" scale="0.030 0.030 0.330"/>
+      </geometry>
+    </visual>
+    <inertial>
       <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
       <mass value="1.6145"/>
     </inertial>
-    <visual name="Gamba 2">
-      <origin rpy="0.000 0.000 -0.536" xyz="0.000 0.000 0.347"/>
-      <material name="Material.004"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.025.stl" scale="0.030 0.030 0.330"/>
-      </geometry>
-    </visual>
   </link>
 
-  <!-- Top Disk links -->
   <link name="Top_Link_1">
     <collision name="Sbarra 1_collision">
       <origin rpy="-1.571 0.000 1.571" xyz="-0.020 0.000 0.255"/>
       <geometry>
-        <box size="0.040 0.340 0.030"/>
+        <mesh filename="Robot/PIPPA/Cube.009.stl" scale="0.020 0.170 0.015"/>
       </geometry>
     </collision>
+    <visual name="Sbarra 1">
+      <origin rpy="-1.571 0.000 1.571" xyz="-0.020 0.000 0.255"/>
+      <material name="Material.003"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cube.009.stl" scale="0.020 0.170 0.015"/>
+      </geometry>
+    </visual>
     <inertial>
       <inertia ixx="0.001" ixy="0.000" ixz="-0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
       <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
       <mass value="3.223"/>
     </inertial>
-    <visual name="Sbarra 1">
-      <origin rpy="-1.571 0.000 1.571" xyz="-0.020 0.000 0.255"/>
-      <material name="Material.004"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cube.006.stl" scale="0.020 0.170 0.015"/>
-      </geometry>
-    </visual>
   </link>
 
   <link name="Top_Link_2">
-    <collision name="Sbarra 3_collision">
+    <collision name="Sbarra 2_collision">
       <origin rpy="-1.571 -0.035 1.571" xyz="-0.020 0.005 0.255"/>
       <geometry>
-        <box size="0.040 0.340 0.030"/>
+        <mesh filename="Robot/PIPPA/Cube.007.stl" scale="0.020 0.170 0.015"/>
       </geometry>
     </collision>
+    <visual name="Sbarra 2">
+      <origin rpy="-1.571 -0.027 1.571" xyz="-0.020 0.005 0.255"/>
+      <material name="Material.003"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cube.007.stl" scale="0.020 0.170 0.015"/>
+      </geometry>
+    </visual>
     <inertial>
       <inertia ixx="0.001" ixy="0.000" ixz="-0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
       <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
       <mass value="3.223"/>
     </inertial>
-    <visual name="Sbarra 3">
-      <origin rpy="-1.571 -0.027 1.571" xyz="-0.020 0.005 0.255"/>
-      <material name="Material.004"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cube.004.stl" scale="0.020 0.170 0.015"/>
-      </geometry>
-    </visual>
   </link>
 
   <link name="Top_Link_3">
-    <collision name="Sbarra 2_collision">
-      <origin rpy="-1.571 -0.016 1.571" xyz="-0.020 0.002 0.255"/>
+    <collision name="Sbarra 3_collision">
+      <origin rpy="-1.571 -0.012 1.571" xyz="-0.020 0.002 0.255"/>
       <geometry>
-        <box size="0.040 0.340 0.030"/>
+        <mesh filename="Robot/PIPPA/Cube.008.stl" scale="0.020 0.170 0.015"/>
       </geometry>
     </collision>
+    <visual name="Sbarra 3">
+      <origin rpy="-1.571 -0.012 1.571" xyz="-0.020 0.002 0.255"/>
+      <material name="Material.003"/>
+      <geometry>
+        <mesh filename="Robot/PIPPA/Cube.008.stl" scale="0.020 0.170 0.015"/>
+      </geometry>
+    </visual>
     <inertial>
       <inertia ixx="0.001" ixy="0.000" ixz="-0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
       <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
       <mass value="3.223"/>
     </inertial>
-    <visual name="Sbarra 2">
-      <origin rpy="-1.571 -0.012 1.571" xyz="-0.020 0.002 0.255"/>
-      <material name="Material.004"/>
-      <geometry>
-        <mesh filename="Robot/PIPPA/Cube.005.stl" scale="0.020 0.170 0.015"/>
-      </geometry>
-    </visual>
   </link>
 
-  <link name="Top_core">
+  <link name="Top_core_Link">
     <collision name="Top Disk_collision">
       <origin rpy="-0.000 0.000 0.000" xyz="0.000 -0.000 -0.052"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.003.stl" scale="0.375 0.375 0.015"/>
+        <mesh filename="Robot/PIPPA/Cylinder.001.stl" scale="0.375 0.375 0.015"/>
       </geometry>
     </collision>
-     <inertial>
-      <inertia ixx="0.003" ixy="0.000" ixz="0.000" iyy="0.003" iyz="0.000" izz="0.003"/>
-      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
-      <mass value="36.6"/>
-    </inertial>
     <visual name="Top Disk">
       <origin rpy="3.142 0.000 0.000" xyz="0.000 -0.000 -0.052"/>
-      <material name="Material.002"/>
+      <material name="Material.001"/>
       <geometry>
-        <mesh filename="Robot/PIPPA/Cylinder.003.stl" scale="0.375 0.375 0.015"/>
+        <mesh filename="Robot/PIPPA/Cylinder.001.stl" scale="0.375 0.375 0.015"/>
       </geometry>
     </visual>
+    <inertial>
+      <inertia ixx="0.003" ixy="0.000" ixz="0.000" iyy="0.003" iyz="0.000" izz="0.003"/>
+      <origin rpy="0.000 0.000 0.000" xyz="0.000 0.000 0.000"/>
+      <mass value="186.6"/>
+    </inertial>
   </link>
-  <material name="Material.002">
+
+
+  <material name="Material.001">
     <color rgba="0.000 0.259 0.800 1.000"/>
   </material>
-  <material name="Material.004">
+  <material name="Material.003">
     <color rgba="0.800 0.243 0.000 1.000"/>
   </material>
-  <material name="Material.005">
+  <material name="Material.006">
     <color rgba="0.000 0.800 0.059 1.000"/>
   </material>
 </robot>
