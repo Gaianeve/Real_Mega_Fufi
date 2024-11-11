@@ -8,8 +8,9 @@
     <child link="Giunto_Link"/>
   </joint>
 
+  <!-- Joint tra Giunto e Gamba (fisso) -->
   <joint name="Giunto_Gamba_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0.08"/>
+    <origin rpy="0 0 0" xyz="0 0 0.08"/> <!-- Giunto è alto 0.08 m -->
     <parent link="Giunto_Link"/>
     <child link="Gamba_Link"/>
   </joint>
