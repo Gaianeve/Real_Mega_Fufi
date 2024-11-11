@@ -37,33 +37,32 @@
     </inertial>
   </link>
 
-  <!-- Link Giunto -->
   <link name="Giunto_Link">
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0.04"/> <!-- Giunto alto 0.08, metà altezza = 0.04 -->
-      <geometry>
-        <cylinder radius="0.0055" length="0.08"/> <!-- Diametro 0.011 m -->
-      </geometry>
-      <material name="Material.003"/>
-    </visual>
-    <collision>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0.04"/> <!-- Giunto alto 0.08, metà altezza = 0.04 -->
+    <geometry>
+      <cylinder radius="0.0055" length="0.08"/> <!-- Diametro 0.011 m -->
+    </geometry>
+    <material name="Material.003"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0.04"/>
+    <geometry>
+      <cylinder radius="0.0055" length="0.08"/>
+    </geometry>
+  </collision>
+  <deformable name="Elastic_1">
+    <inertial>
       <origin rpy="0 0 0" xyz="0 0 0.04"/>
-      <geometry>
-        <cylinder radius="0.0055" length="0.08"/>
-      </geometry>
-    </collision>
-    <deformable name="Elastic_1">
-      <inertial>
-        <origin rpy="0 0 0" xyz="0 0 0.04"/>
-        <mass value="0.0569"/>
-        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
-      </inertial>
-      <collision_margin value="0.005"/>   <!-- Margine di collisione -->
-      <repulsion_stiffness value="200.0"/>  <!-- Rigidità di repulsione -->
-      <friction value="0.01"/>                <!-- Coefficiente di attrito -->
-      <neohookean mu="0.1" lambda="0.02" damping="0.0001"/>
-    </deformable>
-  </link>
+      <mass value="0.0569"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <collision_margin value="0.005"/>   <!-- Margine di collisione -->
+    <repulsion_stiffness value="200.0"/>  <!-- Rigidità di repulsione -->
+    <friction value="0.01"/>                <!-- Coefficiente di attrito -->
+    <neohookean mu="0.01" lambda="0.005" damping="0.00005"/>
+  </deformable>
+</link>
 
   <!-- Link Gamba -->
   <link name="Gamba_Link">
