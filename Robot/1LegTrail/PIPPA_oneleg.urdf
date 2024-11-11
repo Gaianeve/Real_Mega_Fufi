@@ -8,12 +8,12 @@
     <child link="Giunto_Link"/>
   </joint>
 
- <joint name="Giunto_Gamba_joint" type="revolute">
+  <joint name="Giunto_Gamba_joint" type="revolute">
     <origin rpy="0 0 0" xyz="0 0 0.08"/>
     <parent link="Giunto_Link"/>
     <child link="Gamba_Link"/>
     <axis xyz="0 1 0"/> <!-- Asse di rotazione -->
- </joint>
+  </joint>
 
   <!-- Link Colonna -->
   <link name="Link_colonna">
