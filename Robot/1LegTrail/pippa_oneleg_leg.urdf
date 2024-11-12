@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot name="PIPPA_oneleg_leg">
+
+<!-- Link Gamba -->
+  <link name="Gamba_Link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/> <!-- Gamba alta 0.675, metà altezza = 0.3375 -->
+      <geometry>
+        <cylinder radius="0.03" length="0.675"/> <!-- Diametro 0.06 m -->
+      </geometry>
+      <material name="Material.001"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.675"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1.6145"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Materiali -->
+  <material name="Material.001">
+    <color rgba="0.800 0.243 0.000 1.000"/>
+  </material>
+
+  </robot>
