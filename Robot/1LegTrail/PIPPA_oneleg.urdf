@@ -61,7 +61,7 @@
       <collision_margin value="0.005"/>   <!-- Margine di collisione -->
       <repulsion_stiffness value="1000.0"/>  <!-- Rigidità di repulsione -->
       <friction value="0.5"/>                <!-- Coefficiente di attrito -->
-      <neohookean mu="76.92" lambda="115.38" damping="0.01"/>
+      <neohookean mu="76.92" lambda="115.38" damping="0.0"/>
     </deformable>
   </link>
 
