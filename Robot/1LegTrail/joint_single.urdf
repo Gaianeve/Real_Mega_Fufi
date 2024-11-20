@@ -26,5 +26,5 @@
       <friction value="0.5"/>                <!-- Coefficiente di attrito -->
       <neohookean mu="76.92" lambda="115.38" damping="0.0"/>
     </deformable>
-  </link
+  </link>
 </robot>
