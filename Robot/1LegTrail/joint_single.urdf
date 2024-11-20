@@ -1,4 +1,6 @@
-<robot>
+<?xml version="1.0"?>
+<robot name="PIPPA_oneleg">
+
 <link name="Giunto_Link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0.04"/> <!-- Giunto alto 0.08, metà altezza = 0.04 -->
@@ -25,3 +27,4 @@
       <neohookean mu="76.92" lambda="115.38" damping="0.0"/>
     </deformable>
   </link
+</robot>
