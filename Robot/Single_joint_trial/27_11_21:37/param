@@ -1,0 +1,34 @@
+PARAM:#connecting
+p.connect(p.DIRECT)
+
+# using FEM
+p.resetSimulation(p.RESET_USE_DEFORMABLE_WORLD)
+#set sampling time
+p.setGravity(0, 0, -9.81)
+# set sampling time: if too high it becomes instable
+#p.setTimeStep(0.0001)
+#p.setPhysicsEngineParameter(numSolverIterations=2000)
+# Aggiungi il percorso dei dati PyBullet for the plane
+p.setAdditionalSearchPath(pd.getDataPath())
+
+useFixedBase_flag = True
+plane_pos = [0,0,0]
+plane = p.loadURDF("plane.urdf", plane_pos, useFixedBase=useFixedBase_flag)
+
+elastic_joint_id = p.loadSoftBody("elastic_joint_center_less_vertex.obj",
+                                  mass=0.0569,  # Calcolare in base al volume del modello
+                                  useNeoHookean=1,
+                                  NeoHookeanMu=76.92e9,  # Shear modulus (calculated)
+                                  NeoHookeanLambda=115.38e9,  # First Lamé parameter (calculated)
+                                  #NeoHookeanDamping=0.07,  # Moderate damping
+                                  #collisionMargin=0.03,
+                                  #useSelfCollision=0,
+                                  #frictionCoeff=0.8,
+                                  #springElasticStiffness=300e9,  # Increased stiffness
+                                  #springDampingStiffness=30e9,  # Added damping (proportional to stiffness)
+                                  #springBendingStiffness=300e9,  # Increased bending stiffness
+                                  #useFaceContact=1
+                                )
+#arancione
+p.changeVisualShape(elastic_joint_id, -1, rgbaColor=[1, 0.65, 0, 1])
+
