@@ -8,7 +8,6 @@
       <geometry>
         <cylinder radius="0.06" length="0.2"/> <!-- Diametro 0.12 m -->
       </geometry>
-      <material name="Material.001"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -22,8 +21,4 @@
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
   </link>
-
-  <material name="Material.003">
-    <color rgba="0.565 0.933 0.565 1.000"/>
-  </material>
 </robot>
