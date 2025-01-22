@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="PIPPA_oneleg">
+<robot name="oneleg">
 
  <!-- Joint tra Colonna e Scatola (fisso) -->
   <joint name="Colonna_Scatola_joint" type="fixed">
